@@ -13,5 +13,6 @@ public class Problem028 {
 
         System.out.println(hexDecimal);
         scanner.close();
+
     }
 }
