@@ -9,7 +9,7 @@ public class Problem030 {
         char c = scanner.nextLine()
                 .charAt(0);
 
-        int result = c;
+        int result = (int) c;
         System.out.println(result);
     }
 }
