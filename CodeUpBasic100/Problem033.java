@@ -1,13 +1,22 @@
 package CodeUpBasic100;
 
-import java.util.Scanner;
+import java.io.*;
+import java.util.StringTokenizer;
 
 public class Problem033 {
 
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        char c = scanner.next().charAt(0);
-        char nextChar = (char) (c + 1);
-        System.out.println(nextChar);
+    public static void main(String[] args) throws IOException {
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(System.out));
+
+        String str;
+
+        while ((str = bufferedReader.readLine()) != null) {
+            bufferedWriter.write(str + "\n");
+        }
+        bufferedReader.close();
+        bufferedWriter.flush();
+        bufferedWriter.close();
+
     }
 }
