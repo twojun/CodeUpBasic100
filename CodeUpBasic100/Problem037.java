@@ -17,9 +17,5 @@ public class Problem037 {
         for (int i = 0; i < count; i++) {
             System.out.printf(str);
         }
-
-
-
-
     }
 }
