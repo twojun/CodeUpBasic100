@@ -14,6 +14,6 @@ public class Problem043 {
         float f1 = Float.parseFloat(st.nextToken());
         float f2 = Float.parseFloat(st.nextToken());
 
-        System.out.printf("%.3f", (f1/f2));
+        System.out.printf("%.3f", (f1 / f2));
     }
 }
