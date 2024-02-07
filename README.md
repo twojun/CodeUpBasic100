@@ -44,11 +44,22 @@
 # 6. Collections.sort()</br>
 - 객체를 대상으로 sorting (기본값 : 오름차순) </br>
 
-int count = Integer.parseInt(br.readLine()); </br>
-List<Integer> list = new ArrayList<>();</br>
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringBuilder sb = new StringBuilder();
 
-for (int i = 0; i < count; i++) { </br>
-    list.add(Integer.parseInt(br.readLine()));</br>
-}</br>
+        int count = Integer.parseInt(br.readLine());
+        List<Integer> list = new ArrayList<>();
 
-Collections.sort(list); </br>
+        for (int i = 0; i < count; i++) {
+            list.add(Integer.parseInt(br.readLine()));
+        }
+
+        Collections.sort(list);
+
+        for (int i = 0; i < list.size(); i++) {
+            sb.append(list.get(i)).append("\n");
+        }
+
+        System.out.println(sb);
+
+        br.close();
