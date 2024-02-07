@@ -37,4 +37,18 @@
 - Wrapper class </br></br>
 
 (1) 문자열로 변환</br>
-- Integer.toString(정수타입);
+- Integer.toString(정수타입);</br></br></br></br></br></br>
+
+
+
+# 6. Collections.sort()</br>
+- 객체를 대상으로 sorting (기본값 : 오름차순) </br>
+
+int count = Integer.parseInt(br.readLine()); </br>
+List<Integer> list = new ArrayList<>();</br>
+
+for (int i = 0; i < count; i++) { </br>
+    list.add(Integer.parseInt(br.readLine()));</br>
+}</br>
+
+Collections.sort(list); </br>
