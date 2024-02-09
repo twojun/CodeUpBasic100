@@ -18,8 +18,27 @@
 
 
 
+
+
 # 3. 배열 오름차순 정렬 </br>
-   Arrays.sort(arr);</br></br></br></br></br>
+   Arrays.sort(arr);</br></br>
+
+
+3-1. 배열의 참조 특성</br>
+- 배열도 객체이기 때문에 아래와 같은 연산이 가능
+
+      for (int i = 0; i < K; i++) {
+            int[] newArr = new int[N - 1];
+            for (int j = 0; j < N - 1; j++) {
+                newArr[j] = arr[j + 1] - arr[j]; // 인접한 두 원소의 차이를 계산하여 새로운 배열에 저장
+            }
+            arr = newArr; // 새로운 배열로 갱신
+            N--; // 배열의 길이 감소
+        }
+- 이런 경우 newArr의 참조 주소값이 arr 참조 주소에 덮어씌워지므로 arr 배열의 참조 변수는 newArr 배열의 참조변수를 가르키게 된다.</br></br></br></br></br></br>
+
+
+
 
 
 
@@ -33,11 +52,15 @@
 
 
 
+
+
 # 5. Integer Class </br>
 - Wrapper class </br></br>
 
 (1) 문자열로 변환</br>
 - Integer.toString(정수타입);</br></br></br></br></br></br>
+
+
 
 
 
@@ -63,3 +86,38 @@
         System.out.println(sb);
 
         br.close();
+</br></br></br></br></br></br>
+
+
+
+
+# 6. Java Regular Expression(정규표현식)</br>
+(1) 정규표현식은, 특정 문자열이 정해진 규칙(regex)대로 표현되어 있는지 검증하는 식이다. </br></br></br></br></br></br>
+
+
+
+
+
+
+# 7. PS를 하며 기록.. </br>
+(1) Math.sqrt(int n)  
+- n의 제곱수 판별, 반환형은 실수형이므로 type-casting 필요 </br> </br>
+
+(2) Integer.toString()
+- 정수 > 문자열 변환 </br> </br>
+
+
+(3) Character.getNumericValue(ch)
+- 문자를 정수로 변환 (JAVA 11, java.lang package)</br></br>
+
+
+(4) WrapperClass.valueOf(primitive type)
+- 기본형 타입 데이터를 객체로 변환</br></br>
+
+
+(5) String.toLowerCase(), toUpperCase(), 
+- String 클래스에서 사용 가능, 대소문자 변환 </br></br>
+
+
+(6) Character.isLowerCase(), isUpperCase(),
+- 문자의 대/소문자 여부 판단, return : boolean type
