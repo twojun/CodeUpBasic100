@@ -1,27 +1,38 @@
 # CodeUpBasic100
-1. 코딩테스트 대비를 위해 코드업 기초 100문제를 풀고 기록하는 Repository입니다.
+1. 코딩테스트 대비를 위한 Repository입니다.
 2. Java 언어로 풀이를 작성했습니다.
 
-=========================================
+=========================================</br></br></br></br>
+
+
+
 
 # 1. StringTokenizer</br>
 (1) 코딩 테스트에서 입출력 단위 관련으로 많이 사용되는 StringTokenizer</br></br>
 
 (2) BufferedReader를 통해 입력 받은 문자열을 파라미터로 넘어온 구분자를 기준으로 하는 토큰 단위로 나누기 위한 클래스를 말함</br></br>
 
-(3) 특이한 점은 내부 동작 방식인데 하나의 StringTokenizer 객체가 nextToken() 메서드가 동작함에 따라 토큰의 현재 인덱스 을 별도로 저장하면서 동작하기 때문에 다른 구분자에 대한 문자열을 기반으로 토큰을 생성하려면 새로운 객체를 생성해 줘야 한다는 점이다.</br></br></br></br></br>
+(3) 특이한 점은 내부 동작 방식인데 하나의 StringTokenizer 객체가 nextToken() 메서드가 동작함에 따라 토큰의 현재 인덱스 을 별도로 저장하면서 
+동작하기 때문에 다른 구분자에 대한 문자열을 기반으로 토큰을 생성하려면 새로운 객체를 생성해 줘야 한다는 점이다.</br></br></br></br></br></br>
 
 
 
-# 2. 정수 최댓값 확인 : Math.max(para1, para2)  </br>
-- ex) Math.max(Math.max(para1, para2), para3)</br></br></br></br></br>
+# 2. java.lang.Math
+2-1. Math.max(param1, param2)</br>
+- 정수의 최댓값을 비교해 출력한다.
+- ex) Math.max(Math.max(para1, para2), para3)</br></br></br></br>
+
+
+2-2. Math.sqrt(int n)  
+- n의 제곱수 판별해서 반환한다. 반환형은 실수형이므로 type-casting 필요 </br> </br></br></br></br></br>
 
 
 
 
 
-# 3. 배열 오름차순 정렬 </br>
-   Arrays.sort(arr);</br></br>
+# 3. 배열 </br>
+3-1. 배열 오름차순 정렬 
+- Arrays.sort(arr);</br></br></br></br>
 
 
 3-1. 배열의 참조 특성</br>
@@ -48,23 +59,87 @@
 (3) thread-safe하지 않기 때문에 스레드 안정성을 고려한다면 StringBuffer를 사용한다.</br></br>
 
 (4) StringBuilder sb = new StringBuilder(String_type);</br>
-(5) reverse() : 문자열 뒤집기</br></br></br></br></br>
+(5) reverse() : 문자열 뒤집기</br></br></br></br>
+
+
+
+4-1. StringBuilder.setCharAt(int index, char c);
+- 문자열의 특정 인덱스를 다른 문자로 변환 가능하다. </br>
+- parameter(변환 인덱스, 변환할 문자)</br></br>
+
+- 적용 코드</br>
+
+        for (int i = 0; i < my_string.length(); i++) {
+            sb.append(my_string.charAt(i));  // hello
+        }
+        
+        sb.setCharAt(num1, my_string.charAt(num2));
+        sb.setCharAt(num2, my_string.charAt(num1));
+        
+        return String.valueOf(sb);   // hlelo
+
+</br></br></br></br></br></br>
 
 
 
 
 
-# 5. Integer Class </br>
+
+
+# 5. java.lang.String </br>
+5-1. String.toLowerCase(), toUpperCase(), 
+- String 클래스에서 사용 가능, 대소문자 변환 </br></br></br></br>
+
+
+
+5-2. String.valueOf(Object[] obj ... primitive type)
+- 기본형 타입 데이터를 문자열로 변환한다.</br></br></br></br></br></br></br>
+
+
+
+
+
+
+
+
+
+
+# 6. java.lang.Integer Class </br>
 - Wrapper class </br></br>
 
-(1) 문자열로 변환</br>
-- Integer.toString(정수타입);</br></br></br></br></br></br>
+6-1. 문자열로 변환</br>
+- Integer.toString(정수타입);</br></br></br>
+
+
+6-2. Integer.toString()
+- 정수 > 문자열 변환 </br> </br></br></br></br></br></br></br>
 
 
 
 
 
-# 6. Collections.sort()</br>
+
+
+# 7. java.lang.Character</br>
+- Wrapper class </br></br>
+
+7-1. Character.getNumericValue(ch)</br>
+- 문자를 정수로 변환 (JAVA 11, java.lang package)</br></br></br></br>
+
+
+
+7-2. Character.isLowerCase(), isUpperCase()</br>
+- 문자의 대/소문자 여부 판단, return : boolean type</br></br></br></br></br></br>
+
+
+
+
+
+
+
+
+
+# 8.Collections.sort()</br>
 - 객체를 대상으로 sorting (기본값 : 오름차순) </br>
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -91,7 +166,7 @@
 
 
 
-# 6. Java Regular Expression(정규표현식)</br>
+# 9. Java Regular Expression(정규표현식)</br>
 (1) 정규표현식은, 특정 문자열이 정해진 규칙(regex)대로 표현되어 있는지 검증하는 식이다. </br></br></br></br></br></br>
 
 
@@ -99,25 +174,11 @@
 
 
 
-# 7. PS를 하며 기록.. </br>
-(1) Math.sqrt(int n)  
-- n의 제곱수 판별, 반환형은 실수형이므로 type-casting 필요 </br> </br>
-
-(2) Integer.toString()
-- 정수 > 문자열 변환 </br> </br>
+# 9. PS를 하며 기록.. </br>
+9-1. WrapperClass.valueOf(primitive type)
+- 기본형 타입 데이터를 해당하는 Wrapper class 객체로 변환</br></br></br></br>
 
 
-(3) Character.getNumericValue(ch)
-- 문자를 정수로 변환 (JAVA 11, java.lang package)</br></br>
 
 
-(4) WrapperClass.valueOf(primitive type)
-- 기본형 타입 데이터를 객체로 변환</br></br>
 
-
-(5) String.toLowerCase(), toUpperCase(), 
-- String 클래스에서 사용 가능, 대소문자 변환 </br></br>
-
-
-(6) Character.isLowerCase(), isUpperCase(),
-- 문자의 대/소문자 여부 판단, return : boolean type
