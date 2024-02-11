@@ -176,7 +176,37 @@
 
 # 9. PS를 하며 기록.. </br>
 9-1. WrapperClass.valueOf(primitive type)
-- 기본형 타입 데이터를 해당하는 Wrapper class 객체로 변환</br></br></br></br>
+- 기본형 타입 데이터를 해당하는 Wrapper class 객체로 변환</br></br></br></br></br></br>
+
+
+
+
+
+
+# 10. Java Stream API</br>
+10-1. 리스트의 중복된 요소를 삭제</br>
+
+        for (int num : list) {
+            list2.add(num % 42);
+        }
+
+        Collections.sort(list2);
+        
+        List<Integer> deleteDuplicateElements = list2.stream()
+                .distinct()
+                .collect(Collectors.toList());
+
+        System.out.println(deleteDuplicateElements.size());
+
+(1) .stream() : 요소들을 스트림 형태로 변환 </br>
+(2) .distinct() : 요소의 중복을 제거  </br>
+(3) collect(Collectors.toList()) : 새로운 형태의 리스트로 반환 </br> </br>
+
+백준 문제를 풀면서 작성했던 코드이다. list2의 요소들을 스트림으로 변환하고 요소들의 중복을 제거하는 distinct(), 
+마지막으로 collect(Collectors.toList()) 메서드를 사용하여 중복이 제거된 요소를 포함하는 새로운 리스트가 반환된다.
+
+
+
 
 
 
