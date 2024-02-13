@@ -1,8 +1,7 @@
 # CodeUpBasic100
 1. 코딩테스트 대비를 위한 Repository입니다.
-2. Java 언어로 풀이를 작성했습니다.
+2. 프로그래밍 언어는 Java입니다. </br></br></br></br>
 
-=========================================</br></br></br></br>
 
 
 
@@ -17,13 +16,14 @@
 
 
 
+
 # 2. java.lang.Math
-2-1. Math.max(param1, param2)</br>
+## 2-1. Math.max(param1, param2)</br>
 - 정수의 최댓값을 비교해 출력한다.
 - ex) Math.max(Math.max(para1, para2), para3)</br></br></br></br>
 
 
-2-2. Math.sqrt(int n)  
+## 2-2. Math.sqrt(int n)  
 - n의 제곱수 판별해서 반환한다. 반환형은 실수형이므로 type-casting 필요 </br> </br></br></br></br></br>
 
 
@@ -31,11 +31,11 @@
 
 
 # 3. 배열 </br>
-3-1. 배열 오름차순 정렬 
+## 3-1. 배열 오름차순 정렬 
 - Arrays.sort(arr);</br></br></br></br>
 
 
-3-1. 배열의 참조 특성</br>
+## 3-2. 배열의 참조 특성</br>
 - 배열도 객체이기 때문에 아래와 같은 연산이 가능
 
       for (int i = 0; i < K; i++) {
@@ -63,7 +63,7 @@
 
 
 
-4-1. StringBuilder.setCharAt(int index, char c);
+## 4-1. StringBuilder.setCharAt(int index, char c);
 - 문자열의 특정 인덱스를 다른 문자로 변환 가능하다. </br>
 - parameter(변환 인덱스, 변환할 문자)</br></br>
 
@@ -87,12 +87,12 @@
 
 
 # 5. java.lang.String </br>
-5-1. String.toLowerCase(), toUpperCase(), 
+## 5-1. String.toLowerCase(), toUpperCase(), 
 - String 클래스에서 사용 가능, 대소문자 변환 </br></br></br></br>
 
 
 
-5-2. String.valueOf(Object[] obj ... primitive type)
+## 5-2. String.valueOf(Object[] obj ... primitive type)
 - 기본형 타입 데이터를 문자열로 변환한다.</br></br></br></br></br></br></br>
 
 
@@ -107,11 +107,11 @@
 # 6. java.lang.Integer Class </br>
 - Wrapper class </br></br>
 
-6-1. 문자열로 변환</br>
+## 6-1. 문자열로 변환</br>
 - Integer.toString(정수타입);</br></br></br>
 
 
-6-2. Integer.toString()
+## 6-2. Integer.toString()
 - 정수 > 문자열 변환 </br> </br></br></br></br></br></br></br>
 
 
@@ -123,12 +123,12 @@
 # 7. java.lang.Character</br>
 - Wrapper class </br></br>
 
-7-1. Character.getNumericValue(ch)</br>
+## 7-1. Character.getNumericValue(ch)</br>
 - 문자를 정수로 변환 (JAVA 11, java.lang package)</br></br></br></br>
 
 
 
-7-2. Character.isLowerCase(), isUpperCase()</br>
+## 7-2. Character.isLowerCase(), isUpperCase()</br>
 - 문자의 대/소문자 여부 판단, return : boolean type</br></br></br></br></br></br>
 
 
@@ -175,7 +175,7 @@
 
 
 # 9. PS를 하며 기록.. </br>
-9-1. WrapperClass.valueOf(primitive type)
+## 9-1. WrapperClass.valueOf(primitive type)
 - 기본형 타입 데이터를 해당하는 Wrapper class 객체로 변환</br></br></br></br></br></br>
 
 
@@ -184,7 +184,7 @@
 
 
 # 10. Java Stream API</br>
-10-1. 리스트의 중복된 요소를 삭제</br>
+## 10-1. 리스트의 중복된 요소를 삭제</br>
 
         for (int num : list) {
             list2.add(num % 42);
@@ -204,11 +204,4 @@
 
 백준 문제를 풀면서 작성했던 코드이다. list2의 요소들을 스트림으로 변환하고 요소들의 중복을 제거하는 distinct(), 
 마지막으로 collect(Collectors.toList()) 메서드를 사용하여 중복이 제거된 요소를 포함하는 새로운 리스트가 반환된다.
-
-
-
-
-
-
-
 
